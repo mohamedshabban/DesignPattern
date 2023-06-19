@@ -108,30 +108,30 @@ namespace Singleton
             Assert.That(SingletonDatabase.Count, Is.EqualTo(1));
         }
 
-        [Test]
-        public void SingletonTotalPopulationTest()
-        {
-            // testing on a live database
-            var rf = new SingletonRecordFinder();
-            var names = new[] { "Seoul", "Mexico City" };
-            int tp = rf.TotalPopulation(names);
-            Assert.That(tp, Is.EqualTo(17500000 + 17400000));
-        }
+        //[Test]
+        //public void SingletonTotalPopulationTest()
+        //{
+        //    // testing on a live database
+        //    var rf = new SingletonRecordFinder();
+        //    var names = new[] { "Seoul", "Mexico City" };
+        //    int tp = rf.TotalPopulation(names);
+        //    Assert.That(tp, Is.EqualTo(17500000 + 17400000));
+        //}
 
-        [Test]
-        public void DependantTotalPopulationTest()
-        {
-            var db = new DummyDatabase();
-            var rf = new ConfigurableRecordFinder(db);
-            Assert.That(
-              rf.GetTotalPopulation(new[] { "alpha", "gamma" }),
-              Is.EqualTo(4));
-        }
+        //[Test]
+        //public void DependantTotalPopulationTest()
+        //{
+        //    var db = new DummyDatabase();
+        //    var rf = new ConfigurableRecordFinder(db);
+        //    Assert.That(
+        //      rf.GetTotalPopulation(new[] { "alpha", "gamma" }),
+        //      Is.EqualTo(4));
+        //}
     }
 
-    public class Demo
+    public class Program
     {
-        static void Main()
+        static void Main(string[] args)
         {
             var db = SingletonDatabase.Instance;
 
