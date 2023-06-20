@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using Autofac;
-using MoreLinq;
+﻿using MoreLinq;
 using NUnit.Framework;
 using static System.Console;
+
 namespace Singleton
 {
     public interface IDatabase
